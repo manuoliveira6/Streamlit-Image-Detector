@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-04-08T15:40:31.671536",
+    "startedAt": "2024-04-08T15:40:27.961056",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--model",
+        "resnet152",
+        "--epochs",
+        "3"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\LENOVO\\Desktop\\M\u00e1sterBD\\ML2\\Practicas_DeepLearning_2024\\streamlit_app\\weightandbiases.py",
+    "codePathLocal": "weightandbiases.py",
+    "codePath": "streamlit_app\\weightandbiases.py",
+    "git": {
+        "remote": "https://github.com/agascong/Practicas_DeepLearning_2024.git",
+        "commit": "3aa5373944c9b861b6c8749acfc106f0d23c8cb3"
+    },
+    "email": "manuoliveiratic@gmail.com",
+    "root": "C:/Users/LENOVO/Desktop/M\u00e1sterBD/ML2/Practicas_DeepLearning_2024",
+    "host": "LAPTOP-9AO0MNCI",
+    "username": "LENOVO",
+    "executable": "C:\\Users\\LENOVO\\anaconda3\\envs\\ML_CNN\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.69237899780273,
+            "used": 324.21734619140625
+        }
+    },
+    "memory": {
+        "total": 7.877658843994141
+    }
+}

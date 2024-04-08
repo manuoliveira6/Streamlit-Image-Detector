@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\MásterBD\ML2\Practicas_DeepLearning_2024\streamlit_app\weightandbiases.py", line 96, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\LENOVO\Desktop\MásterBD\ML2\Practicas_DeepLearning_2024\streamlit_app\weightandbiases.py", line 51, in main
+    output = my_model(images)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LENOVO\Desktop\MásterBD\ML2\Practicas_DeepLearning_2024\streamlit_app\cnn.py", line 58, in forward
+    x = self.base_model(x)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torchvision\models\resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torchvision\models\resnet.py", line 275, in _forward_impl
+    x = self.layer3(x)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torchvision\models\resnet.py", line 154, in forward
+    out = self.conv3(out)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\LENOVO\anaconda3\envs\ML_CNN\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
