@@ -1,0 +1,20 @@
+
+Empezando el entrenamiento...
+Epoch 1/1: Train Loss: 2.372932713082496, Train Accuracy: 0.45862646566164156, Valid Loss: 2.2003852103618864, Valid Accuracy: 0.624
+Traceback (most recent call last):
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 101, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 90, in main
+    my_model.save(f'models/{model}-{epochs}epoch-{learning_rate}lr')
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\cnn.py", line 168, in save
+    torch.save(self.state_dict(), filename+'.pt')
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\DL\Lib\site-packages\torch\serialization.py", line 628, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\DL\Lib\site-packages\torch\serialization.py", line 502, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\DL\Lib\site-packages\torch\serialization.py", line 473, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory models\models does not exist.

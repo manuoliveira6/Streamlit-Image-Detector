@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 117, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 55, in main
+    my_model = load_custom_model(model)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 24, in load_custom_model
+    new_model = CNN()  # Aquí debes reemplazar CNN() con la clase de tu modelo
+                ^^^^^
+TypeError: CNN.__init__() missing 2 required positional arguments: 'base_model' and 'num_classes'

@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-04-13T10:29:19.906961",
+    "startedAt": "2024-04-13T10:29:19.327712",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--model",
+        "resnet50",
+        "--learning_rate",
+        "0.002",
+        "--epochs",
+        "1"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\lucas\\OneDrive\\MBD\\MachineLearningII\\Practicas_DeepLearning_2024-main\\Practicas_DeepLearning_2024\\Streamlit-Image-Detector\\weightandbiases.py",
+    "codePathLocal": "weightandbiases.py",
+    "codePath": "weightandbiases.py",
+    "git": {
+        "remote": "https://github.com/manuoliveira6/Streamlit-Image-Detector.git",
+        "commit": "1d2a4ece953f3bb41810e44c781e4860ed3735b2"
+    },
+    "email": "202312020@alu.comillas.edu",
+    "root": "C:/Users/lucas/OneDrive/MBD/MachineLearningII/Practicas_DeepLearning_2024-main/Practicas_DeepLearning_2024/Streamlit-Image-Detector",
+    "host": "LenovoLucas",
+    "username": "lucas",
+    "executable": "C:\\Users\\lucas\\OneDrive\\MBD\\MachineLearningII\\Practicas_DeepLearning_2024-main\\DL\\Scripts\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2803.0,
+        "min": 0.0,
+        "max": 2803.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2803.0,
+            "min": 0.0,
+            "max": 2803.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 474.71581649780273,
+            "used": 190.45037460327148
+        }
+    },
+    "memory": {
+        "total": 15.788383483886719
+    }
+}

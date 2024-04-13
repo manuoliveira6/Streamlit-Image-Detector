@@ -12,7 +12,25 @@ classification_models = torchvision.models.list_models(module=torchvision.models
 
 def validate_model(model_name):
     if model_name not in classification_models:
-        raise ValueError(f"El modelo {model_name} no está en la lista de modelos de clasificación disponibles.")
+         print(f"El modelo {model_name} no está en la lista de modelos de clasificación disponibles.")
+    
+
+def load_custom_model(model_name, num_classes):
+    # Extraer el nombre base del modelo
+    base_model_name = model_name.split('-')[0]
+    
+    model_path = os.path.join('models', f'{model_name}.pt')
+    if os.path.exists(model_path):
+        # Crear una nueva instancia de tu modelo CNN
+        new_model = CNN(getattr(torchvision.models, base_model_name)(weights='DEFAULT'), num_classes)
+        # Cargar los pesos del modelo guardado
+        new_model.load_state_dict(torch.load(model_path))
+        return new_model
+    else:
+        # Retornar la función CNN si no existe el modelo personalizado
+        return CNN(getattr(torchvision.models, base_model_name)(weights='DEFAULT'), num_classes)
+
+
 
 def main(model, learning_rate, epochs):
     # Validar el modelo
@@ -36,7 +54,7 @@ def main(model, learning_rate, epochs):
                                                     batch_size=32, 
                                                     img_size=224) 
 
-    my_model = CNN(getattr(torchvision.models, model)(weights='DEFAULT'), num_classes)
+    my_model = load_custom_model(model, num_classes)
     optimizer = torch.optim.Adam(my_model.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
 
@@ -87,7 +105,7 @@ def main(model, learning_rate, epochs):
 
     if not os.path.exists('models'):
         os.makedirs('models')
-    my_model.save(f'models/{model}-{epochs}epoch-{learning_rate}lr')
+    my_model.save(f'{model}-{epochs}epoch-{learning_rate}lr')
 
 
 # Configurar y parsear los argumentos de línea de comandos
