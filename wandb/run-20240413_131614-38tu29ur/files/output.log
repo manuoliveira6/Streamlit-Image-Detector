@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 115, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 53, in main
+    my_model = load_custom_model(model)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 22, in load_custom_model
+    new_model = CNN(getattr(torchvision.models, model_name)(weights='DEFAULT'), num_classes)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torchvision.models' has no attribute 'resnet152-30epoch-0.001lr'

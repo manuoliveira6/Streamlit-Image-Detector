@@ -7,9 +7,9 @@ import numpy as np
 from PIL import Image
 from cnn import CNN, load_model_weights
 
-# ========================================================================
+# ===================================================================
 # Functions
-# ========================================================================
+# ===================================================================
 
 def model_predict():
 
@@ -23,9 +23,12 @@ def model_predict():
 def predict(my_trained_model, img):
 
     transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.Grayscale(num_output_channels=1),
         transforms.ToTensor(),
         transforms.Lambda(lambda x: x.repeat(3, 1, 1) if x.shape[0] == 1 else x)
     ])
+
 
     tensor = transform(img)
     my_trained_model.eval()
@@ -34,7 +37,10 @@ def predict(my_trained_model, img):
         _, predicted = torch.max(output, 1)
     return predicted
 
+
 def transform_image(img):
+
+    img = transforms.Resize((224, 224))(img)
     # Convert the image to grayscale
     img_gray = transforms.Grayscale(num_output_channels=1)(img)
     # Convert the grayscale image to a tensor
@@ -42,6 +48,7 @@ def transform_image(img):
     # Normalize the tensor for plotting
     img_tensor = (img_tensor - torch.min(img_tensor)) / (torch.max(img_tensor) - torch.min(img_tensor))
     return {"img": img, "im_gray": img_gray, "img_tensor": img_tensor}
+
 
 
 # ========================================================================
@@ -77,5 +84,3 @@ with col41:
             img = Image.open(uploaded_image)
             predicted_class = model_predict()  # Llama a la función de predicción
             st.write("##### Predicted Class:", predicted_class)
-
-

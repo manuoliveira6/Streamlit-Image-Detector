@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 111, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\lucas\OneDrive\MBD\MachineLearningII\Practicas_DeepLearning_2024-main\Practicas_DeepLearning_2024\Streamlit-Image-Detector\weightandbiases.py", line 50, in main
+    optimizer = torch.optim.Adam(my_model.parameters(), lr=learning_rate)
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'collections.OrderedDict' object has no attribute 'parameters'
