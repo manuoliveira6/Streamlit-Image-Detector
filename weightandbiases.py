@@ -28,8 +28,8 @@ def main(model, learning_rate, epochs):
         }
     )
 
-    train_dir = '../dataset/training'
-    valid_dir = '../dataset/validation'
+    train_dir = '../../dataset/training'
+    valid_dir = '../../dataset/validation'
 
     train_loader, valid_loader, num_classes = load_data(train_dir, 
                                                     valid_dir, 
@@ -99,4 +99,4 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
     main(args.model, args.learning_rate, args.epochs)
-    # python weightandbiases.py --model resnet50 --learning_rate 0.001 --epochs 10
+    # python weightandbiases.py --model resnet152 --learning_rate 0.0001 --epochs 50

@@ -14,7 +14,7 @@ import json
 class CNN(nn.Module):
     """Convolutional Neural Network model for image classification."""
     
-    def __init__(self, base_model, num_classes, unfreezed_layers=0):
+    def __init__(self, base_model, num_classes, unfreezed_layers=25):
         """CNN model initializer.
 
         Args:

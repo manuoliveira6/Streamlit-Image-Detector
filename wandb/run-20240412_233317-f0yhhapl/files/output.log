@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\ferna\OneDrive\Escritorio\MBD\ML2(Eugenio)\Chapter 5 Deep learning\Practicas_DeepLearning_2024\streamlit_app\Streamlit-Image-Detector\weightandbiases.py", line 101, in <module>
+    main(args.model, args.learning_rate, args.epochs)
+  File "C:\Users\ferna\OneDrive\Escritorio\MBD\ML2(Eugenio)\Chapter 5 Deep learning\Practicas_DeepLearning_2024\streamlit_app\Streamlit-Image-Detector\weightandbiases.py", line 39, in main
+    my_model = CNN(resnet152, num_classes)
+                   ^^^^^^^^^
+NameError: name 'resnet152' is not defined

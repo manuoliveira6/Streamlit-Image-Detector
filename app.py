@@ -14,8 +14,8 @@ from cnn import CNN, load_model_weights
 def model_predict():
 
     classes = ['Bedroom', 'Coast', 'Forest', 'Highway', 'Industrial', 'Inside city', 'Kitchen', 'Living room', 'Mountain', 'Office', 'Open country', 'Store', 'Street', 'Suburb', 'Tall building']
-    model_weights = load_model_weights('resnet50-1epoch')
-    my_trained_model = CNN(torchvision.models.resnet50(weights='DEFAULT'), len(classes))
+    model_weights = load_model_weights('models/resnet152-25epoch-1e-05lr')
+    my_trained_model = CNN(torchvision.models.resnet152(weights='DEFAULT'), len(classes))
     my_trained_model.load_state_dict(model_weights)
     predicted_label = predict(my_trained_model, img)
     return classes[predicted_label]
@@ -52,7 +52,7 @@ col01, col02, col03 = st.columns(3)
 with col01:
     st.write('# Image prediction with CNNs')
 with col03:
-    st.image("C:/Users/LENOVO/Desktop/MásterBD/ML2/Practicas_DeepLearning_2024/streamlit/img/icai.png")
+    st.image("C:/Users/ferna/OneDrive/Escritorio/MBD/ML2(Eugenio)/Chapter 5 Deep learning/Practicas_DeepLearning_2024/streamlit/icai.png")
 
 st.write("### By: Fernando Carballeda, Lucas Justo, Gonzalo Barderas and Manuel Oliveira")
 
